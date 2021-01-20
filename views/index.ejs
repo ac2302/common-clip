@@ -7,14 +7,22 @@
 		<!-- linking css -->
 		<link rel="stylesheet" href="main.css" />
 	</head>
+
 	<body>
 		<!-- displaying the clip -->
-		<div class="clip"><%= clip %></div>
+		<div class="clip-div">
+			<pre id="clip"><%= clip %></pre>
+		</div>
+		<!-- button to copy clip to clipboard -->
+		<button id="copy">copy</button>
 
 		<!-- form -->
 		<form action="/" method="POST" id="new-clip-form">
 			<textarea name="clip" id="new-clip" form="new-clip-form"></textarea>
 			<input type="submit" value="send" />
 		</form>
+
+		<!-- linking javascript -->
+		<script src="script.js"></script>
 	</body>
 </html>
