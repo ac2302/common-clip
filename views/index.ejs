@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>common-clip</title>
-    <!-- linking css -->
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <%= clip %>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>common-clip</title>
+		<!-- linking css -->
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<!-- displaying the clip -->
+		<div class="clip"><%= clip %></div>
+
+		<!-- form -->
+		<form action="/" method="POST" id="new-clip-form">
+			<textarea name="clip" id="new-clip" form="new-clip-form"></textarea>
+			<input type="submit" value="send" />
+		</form>
+	</body>
 </html>

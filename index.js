@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 // globals
-let clip = "hello, world!";
+let clip = "clip is empty";
 
 // listen
 app.listen(process.env.PORT, () => {
@@ -23,4 +23,10 @@ app.listen(process.env.PORT, () => {
 // serving the page
 app.get("/", (req, res) => {
 	res.render("index", { clip: clip });
+});
+
+// getting new clip
+app.post("/", (req, res) => {
+	clip = req.body.clip;
+	res.redirect("/");
 });
